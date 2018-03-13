@@ -40,6 +40,7 @@ Installed packages
 * Debian 8 (jessie)
 * locales
 * apache2
+* git-core
 * php5
 * php5-cli
 * libapache2-mod-php5
@@ -48,6 +49,7 @@ Installed packages
 * php5-ldap
 * php5-mysql
 * php5-pgsql
+* php5-curl
 
 Configurations
 ----------------
