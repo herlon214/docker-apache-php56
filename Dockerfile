@@ -3,6 +3,8 @@ MAINTAINER Alexander Schenkel <alex@alexi.ch>
 
 VOLUME ["/var/www"]
 
+WORKDIR /var/www
+
 RUN apt-get update && \
     apt-get install -y \
       git-core \
