@@ -21,6 +21,7 @@ RUN apt-get update && \
       php5-pgsql
 
 COPY apache_default /etc/apache2/sites-available/000-default.conf
+COPY php.ini /etc/php5/apache2/php.ini
 COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 RUN a2enmod rewrite
