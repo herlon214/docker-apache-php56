@@ -7,6 +7,7 @@ WORKDIR /var/www
 
 RUN apt-get update && \
     apt-get install -y \
+      curl \
       git-core \
       locales \
       apache2 \
@@ -25,6 +26,8 @@ COPY php.ini /etc/php5/apache2/php.ini
 COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 RUN a2enmod rewrite
+
+HEALTHCHECK CMD curl --fail http://localhost/ || exit 1
 
 EXPOSE 80
 CMD ["/usr/local/bin/run"]
