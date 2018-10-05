@@ -27,7 +27,5 @@ COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 RUN a2enmod rewrite
 
-HEALTHCHECK CMD curl --fail http://localhost/ || exit 1
-
 EXPOSE 80
 CMD ["/usr/local/bin/run"]
